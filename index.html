@@ -352,11 +352,17 @@
             pointer-events: auto;
             transition: all 0.3s ease;
             font-weight: bold;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .slide-btn:hover {
             background: rgba(255, 107, 53, 1);
             transform: scale(1.1);
+        }
+        
+        .slide-btn:active {
+            transform: scale(0.95);
         }
         
         .slide-counter {
@@ -415,8 +421,15 @@
             }
             
             .slide-btn {
-                font-size: 1.5rem;
-                padding: 0.7rem 1rem;
+                font-size: 1.2rem;
+                padding: 0.6rem 0.9rem;
+            }
+            
+            .slide-caption {
+                font-size: 0.75rem;
+                padding: 0.5rem 1rem;
+                max-width: 80%;
+                text-align: center;
             }
         }
         
@@ -433,6 +446,11 @@
             .services, .features, .cta {
                 padding: 1rem;
             }
+            
+            .slide-caption {
+                font-size: 0.65rem;
+                padding: 0.4rem 0.8rem;
+            }
         }
     </style>
 </head>
@@ -444,7 +462,6 @@
                 <div class="location-badge">Eastern & North Eastern Melbourne</div>
                 <h1 class="main-title">LSR CARPENTRY</h1>
                 <h2 class="subtitle">All Small Carpentry Jobs & Handyman Services</h2>
-                <div class="guarantee">NO JOB TOO SMALL!</div>
             </div>
         </header>
 
