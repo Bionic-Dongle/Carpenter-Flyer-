@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpenter & Handyman Warrandyte, Eltham, Research | Eastern Melbourne | 0409 884 707</title>
+    <meta name="description" content="Experienced carpenter and handyman serving Warrandyte, Eltham, Research & Eastern Melbourne. Deck repairs, kitchen fit-outs, plastering, custom carpentry. Call 0409 884 707 for free quotes.">
+    <meta name="keywords" content="handyman Warrandyte, carpenter Eltham, deck repairs Research, kitchen fit-out Kangaroo Ground, plastering Hurstbridge, Eastern Melbourne handyman, local carpenter">
+    <meta name="geo.region" content="AU-VIC">
+    <meta name="geo.placename" content="Warrandyte, Eltham, Research, Eastern Melbourne">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #2980B9;    
+           }
+        
+        .flyer {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid #333;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(45deg, #FF6B35 0%, #F7931E 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .location-badge {
+            background: #333;
+            color: #FF6B35;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin-bottom: 0.5rem;
+            line-height: 0.9;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .guarantee {
+            background: #333;
+            color: #FFD700;
+            padding: 0.8rem 1.5rem;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #FFD700;
+        }
+        
+        /* Contact Strip */
+        .contact-strip {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .phone-number {
+            color: #FFD700;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .phone-number:hover {
+            color: #FF6B35;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .services-title {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-column {
+            background: white;
+            padding: 1.5rem;
+            border-left: 8px solid #FF6B35;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .service-item::before {
+            content: "✓";
+            background: #4CAF50;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Features Section */
+        .features {
+            background: #2C3E50;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        
+        .feature {
+            padding: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .feature-text {
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(45deg, #FFD700 0%, #FFA500 100%);
+            color: #333;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 3px solid;
+        }
+        
+        .btn-call {
+            background: #FF6B35;
+            color: white;
+            border-color: #FF6B35;
+        }
+        
+        .btn-email {
+            background: #333;
+            color: #FFD700;
+            border-color: #333;
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section h4 {
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        
+        .footer-section p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem auto;
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .slideshow-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            background: #000;
+            display: none;
+        }
+        
+        .slideshow-image.active {
+            display: block;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+        
+        .slide-btn {
+            background: rgba(255, 107, 53, 0.8);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .slide-btn:hover {
+            background: rgba(255, 107, 53, 1);
+            transform: scale(1.1);
+        }
+        
+        .slide-counter {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: #FFD700;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-strip {
+                font-size: 1.3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .slideshow-image {
+                height: 300px;
+            }
+            
+            .slide-btn {
+                font-size: 1.5rem;
+                padding: 0.7rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .flyer {
+                margin: 10px;
+                border-width: 2px;
+            }
+            
+            .services, .features, .cta {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="location-badge">Eastern & North Eastern Melbourne</div>
+                <h1 class="main-title">LSR CARPENTRY</h1>
+                <h2 class="subtitle">All Small Carpentry Jobs & Handyman Services</h2>
+                <div class="guarantee">NO JOB TOO SMALL!</div>
+            </div>
+        </header>
+
+        <!-- Contact Strip -->
+        <div class="contact-strip">
+            CALL NOW: <a href="tel:0409884707" class="phone-number">0409 884 707</a>
+        </div>
+
+        <!-- Services -->
+        <section class="services">
+            <div class="services-header">
+                <h2 class="services-title">Our Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-column">
+                    <div class="service-item">Carpentry & Timber Work</div>
+                    <div class="service-item">  Cupboard Repairs</div>
+                    <div class="service-item">Built-in Storage Solutions</div>
+                    <div class="service-item">Skirting & Architrave</div>
+                    <div class="service-item">Custom Shelving</div>
+                    <div class="service-item">Door & Window Repairs</div>
+                </div>
+                
+                <div class="service-column">
+                    <div class="service-item">Plastering & Rendering</div>
+                    <div class="service-item">Plaster Patching & Repair</div>
+                    <div class="service-item">Deck Building & Repairs</div>
+                    <div class="service-item">Painting & Touch-ups</div>
+                    <div class="service-item">Flat Pack Assembly</div>
+                    <div class="service-item">General Maintenance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-title">Prompt Service</div>
+                    <div class="feature-text">Fast response times for all jobs</div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💰</span>
+                    <div class="feature-title">Free Quotes</div>
+                    <div class="feature-text">No hidden fees, honest pricing</div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏆</span>
+                    <div class="feature-title">35+ Years Experience</div>
+                    <div class="feature-text">Quality workmanship guaranteed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">Contact me today for your FREE quote!</p>
+            <div class="cta-buttons">
+                <a href="tel:0409884707" class="cta-btn btn-call">📞 Call Now</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>Eastern & North Eastern Melbourne<br>
+                    Warrandyte, Eltham, Research, Kangaroo Ground, Hurstbridge, Diamond Creek, Wattle Glen & Surrounding Areas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday-Friday: 7AM-6PM<br>
+                    Weekends: By arrangement<br>
+                    Emergency calls available</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 0409 884 707<br>
+                </div>
+            </div>
+            
+            <h4 style="color: #FFD700; text-align: center; margin: 2rem 0 1rem; font-size: 1.5rem; text-transform: uppercase;">Recent Projects</h4>
+            
+            <div class="slideshow-container">
+                <img class="slideshow-image active" src="" alt="Project Image" id="currentSlide">
+                
+                <div class="slide-caption" id="slideCaption">Loading...</div>
+                
+                <div class="slide-controls">
+                    <button class="slide-btn" onclick="changeSlide(-1)">‹</button>
+                    <button class="slide-btn" onclick="changeSlide(1)">›</button>
+                </div>
+                
+                <div class="slide-counter" id="slideCounter">1 / 1</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Melbourne Handyman Services",
+        "description": "Professional handyman and carpentry services in Melbourne. No job too small - home repairs, carpentry, maintenance.",
+        "telephone": "0409884707",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Melbourne",
+            "addressRegion": "VIC",
+            "addressCountry": "AU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -37.8136,
+            "longitude": 144.9631
+        },
+        "serviceArea": {
+            "@type": "City",
+            "name": "Melbourne"
+        },
+        "priceRange": "$$",
+        "openingHours": [
+            "Mo-Fr 07:00-18:00",
+            "Sa 08:00-16:00"
+        ]
+    }
+    </script>
+    
+    <script>
+        // All project images from Assets folder
+        const projectImages = [
+            // 2nd Story Extension
+            { src: 'Assets/2nd story ext/South-arm-1.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-2.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-3.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-4.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-5.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-6.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-7.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-8.JPG', caption: '2nd Story Extension' },
+            
+            // Atrium
+            { src: 'Assets/Atrium/Atrium-1.JPEG', caption: 'Atrium Project' },
+            { src: 'Assets/Atrium/Atrium-2.JPEG', caption: 'Atrium Project' },
+            
+            // Auguster Rd. Extension & Reno
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-1.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-2.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-3.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-4.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-5.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-6.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-7.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-8.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-9.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-10.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-11.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-12-A.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-12-B.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-13.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-14.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-15.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-16-A.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-16-B.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-17.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-18.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-19.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-20.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-21.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-22.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-23.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-24.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-25.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-26.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-27.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-28-A.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-28-B.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-28-C.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-28-D.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-29.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-30.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-31.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-32.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-33.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-34.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-35.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-36.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-37.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/IMG_1307.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/IMG_1333.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/IMG_1380.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/IMG_1381.JPG', caption: 'Auguster Rd Extension' },
+            
+            // Door Install
+            { src: 'Assets/Door install/Door_1.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_2.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_3.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_4.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_5.JPG', caption: 'Door Installation' },
+            
+            // Front Deck
+            { src: 'Assets/Front Deck/Front-D_1.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_2.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_3.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_4.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_5.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_6.JPEG', caption: 'Front Deck' },
+            
+            // Kitchen Reno
+            { src: 'Assets/Kitchen Reno/A.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1181.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1182.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1183.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1184.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1220.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1221.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1302.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1303.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1305.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1306.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1317.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1318.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1330.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1331.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1332.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1333.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1335.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1336.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1341.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1343.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1377.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1380.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1382.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1461.JPEG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1463.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1469.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1470.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1471.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1472.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1514.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1515.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1516.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1517.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1518.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1522.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1523.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1524.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1527.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1529.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1559.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1560.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1561.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1562.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1563.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1566.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1567.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1568.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1569.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1627.JPEG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1635.PNG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1637.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1650.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1695.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1696.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1697.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1704.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1705.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1746.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1747.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1754.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1758.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1759.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1760.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1763.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1769.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1770.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1771.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1772.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/IMG_1773.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/z-1.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/z-2.JPG', caption: 'Kitchen Renovation' },
+            { src: 'Assets/Kitchen Reno/z-3.JPEG', caption: 'Kitchen Renovation' },
+            
+            // Kitchens
+            { src: 'Assets/Kitchens/1.PNG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/2.PNG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/3.JPG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/4.JPEG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/5.JPEG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/6.JPG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/7.JPG', caption: 'Kitchen Projects' },
+            { src: 'Assets/Kitchens/8.JPG', caption: 'Kitchen Projects' },
+            
+            // Eltham Pergola
+            { src: 'Assets/elth pergola/pergola-1.JPEG', caption: 'Eltham Pergola' },
+            { src: 'Assets/elth pergola/pergola-2.JPEG', caption: 'Eltham Pergola' },
+            
+            // Mancave Shed
+            { src: 'Assets/mancave-shed/IMG_4927.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-1.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-2.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-3.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-4.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-5.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-6.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-7.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-8.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-9.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-10.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-11.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-12.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-13.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-14.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-15.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-16.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-17.JPEG', caption: 'Mancave Shed' },
+            
+            // Ruben's Deck
+            { src: "Assets/Ruben's deck/Deck-1.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-2.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-3.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-4.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/IMG_2419.JPEG", caption: "Ruben's Deck" },
+            
+            // Weerona
+            { src: 'Assets/weerona/IMG_3011.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-1.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-2.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-3.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-4.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-5.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-6.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-7.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-8.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-9.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-10.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-11.JPEG', caption: 'Weerona Project' },
+            
+            // Outdoor Living
+            { src: 'Assets/Outdoor Living/Out-1.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-2.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-3.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-4.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-5.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-6.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-7.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-8.JPG', caption: 'Outdoor Living' },
+            
+            // Subfloor
+            { src: 'Assets/Subfloor/Sub-Floor-1.JPG', caption: 'Subfloor Work' },
+            { src: 'Assets/Subfloor/Sub-Floor-2.JPG', caption: 'Subfloor Work' },
+            { src: 'Assets/Subfloor/Sub-Floor-3.JPG', caption: 'Subfloor Work' },
+            { src: 'Assets/Subfloor/Sub-Floor-4.JPG', caption: 'Subfloor Work' },
+            { src: 'Assets/Subfloor/Sub-Floor-5.JPG', caption: 'Subfloor Work' },
+            
+            // Veranda Repairs
+            { src: 'Assets/Veranda repairs/IMG_2267.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2268.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2298.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2299.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2300.JPG', caption: 'Veranda Repairs' }
+        ];
+        
+        let currentSlideIndex = 0;
+        let autoPlayInterval;
+        
+        // Initialize slideshow
+        function initSlideshow() {
+            if (projectImages.length > 0) {
+                showSlide(0);
+                startAutoPlay();
+            }
+        }
+        
+        // Show specific slide
+        function showSlide(index) {
+            const img = document.getElementById('currentSlide');
+            const caption = document.getElementById('slideCaption');
+            const counter = document.getElementById('slideCounter');
+            
+            currentSlideIndex = index;
+            
+            // Wrap around
+            if (currentSlideIndex >= projectImages.length) {
+                currentSlideIndex = 0;
+            }
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = projectImages.length - 1;
+            }
+            
+            // Update image and caption
+            img.src = projectImages[currentSlideIndex].src;
+            caption.textContent = projectImages[currentSlideIndex].caption;
+            counter.textContent = `${currentSlideIndex + 1} / ${projectImages.length}`;
+        }
+        
+        // Change slide
+        function changeSlide(direction) {
+            stopAutoPlay();
+            showSlide(currentSlideIndex + direction);
+            startAutoPlay();
+        }
+        
+        // Auto-play functionality
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                showSlide(currentSlideIndex + 1);
+            }, 4000); // Change every 4 seconds
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+        
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', initSlideshow);
+    </script>
+</body>
+</html>
