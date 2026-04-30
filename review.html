@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review — Valley Carpentry</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #2980B9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #333;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .divider {
+            height: 4px;
+            background: #FF6B35;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #FF6B35;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Star rating */
+        .star-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .star {
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.15s;
+            user-select: none;
+            line-height: 1;
+        }
+
+        .star.selected,
+        .star.hover {
+            color: #FFD700;
+        }
+
+        input[name="stars"] {
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #FF6B35;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #e55a26;
+        }
+
+        .thankyou {
+            display: none;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .thankyou .tick {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .thankyou h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .thankyou p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">
+            <h1>Valley Carpentry</h1>
+            <p>We'd love to hear how the job went</p>
+        </div>
+        <div class="divider"></div>
+
+        <form id="reviewForm" action="https://formspree.io/f/mvzlpyoz" method="POST">
+
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. J. Smith, Warrandyte" required>
+
+            <label>Star rating</label>
+            <div class="star-row" id="starRow">
+                <span class="star" data-val="1">★</span>
+                <span class="star" data-val="2">★</span>
+                <span class="star" data-val="3">★</span>
+                <span class="star" data-val="4">★</span>
+                <span class="star" data-val="5">★</span>
+            </div>
+            <input type="hidden" name="stars" id="starsInput" value="">
+
+            <label for="review">Your review</label>
+            <textarea id="review" name="review" placeholder="Tell us about the work done..." required></textarea>
+
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+
+        <div class="thankyou" id="thankYou">
+            <div class="tick">✅</div>
+            <h2>Thanks for your review!</h2>
+            <p>Really appreciate you taking the time.</p>
+        </div>
+    </div>
+
+    <script>
+        // Star rating
+        const stars = document.querySelectorAll('.star');
+        const starsInput = document.getElementById('starsInput');
+        let selectedVal = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const val = +star.dataset.val;
+                stars.forEach(s => s.classList.toggle('hover', +s.dataset.val <= val));
+            });
+            star.addEventListener('mouseout', () => {
+                stars.forEach(s => s.classList.remove('hover'));
+            });
+            star.addEventListener('click', () => {
+                selectedVal = +star.dataset.val;
+                starsInput.value = selectedVal;
+                stars.forEach(s => s.classList.toggle('selected', +s.dataset.val <= selectedVal));
+            });
+        });
+
+        // Handle submit via fetch so we can show thank you on same page
+        document.getElementById('reviewForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (!starsInput.value) {
+                alert('Please select a star rating.');
+                return;
+            }
+            const data = new FormData(this);
+            await fetch(this.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+            this.style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
