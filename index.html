@@ -629,27 +629,92 @@
     <script>
         // All project images from Assets folder
         const projectImages = [
-            // 2nd Story Extension
-            { src: 'Assets/2nd story ext/South-arm-1.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-2.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-3.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-4.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-5.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-6.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-7.JPG', caption: '2nd Story Extension' },
-            { src: 'Assets/2nd story ext/South-arm-8.JPG', caption: '2nd Story Extension' },
-            
-            // Atrium
-            { src: 'Assets/Atrium/Atrium-1.JPEG', caption: 'Atrium Project' },
-            { src: 'Assets/Atrium/Atrium-2.JPEG', caption: 'Atrium Project' },
-            
+            // Veranda Repairs
+            { src: 'Assets/Veranda repairs/IMG_2267.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2268.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2298.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2299.JPG', caption: 'Veranda Repairs' },
+            { src: 'Assets/Veranda repairs/IMG_2300.JPG', caption: 'Veranda Repairs' },
+
+            // Weerona
+            { src: 'Assets/weerona/Wee-1.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-2.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-3.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-4.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-5.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-6.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-7.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-8.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-9.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-9-B.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-10.JPEG', caption: 'Weerona Project' },
+            { src: 'Assets/weerona/Wee-11.JPEG', caption: 'Weerona Project' },
+
+            // Ruben's Deck
+            { src: "Assets/Ruben's deck/Deck-1.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-2.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-3.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/Deck-4.JPEG", caption: "Ruben's Deck" },
+            { src: "Assets/Ruben's deck/IMG_2419.JPEG", caption: "Ruben's Deck" },
+
+            // Battery Point
+            { src: 'Assets/Battery Point/1-2nd story/01.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/1.jpg', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/2.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/3.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/4.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/5.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/6.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/7.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/8.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/9.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/10.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/10-b.jpg', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/11.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/12.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/13.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/14.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/14-a.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/14-b.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/1-2nd story/15.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/1.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/2.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/3.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/4.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/5.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/6.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/7.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/8.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/9.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/10.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/11.png', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/12.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/13.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/2-1st Floor/14.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/3-Chimeny/1.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/3-Chimeny/2.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/3-Chimeny/3.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/3-Chimeny/4.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/4-Kitchen/1.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/4-Kitchen/2.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/4-Kitchen/3.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/4-Kitchen/4.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/5-Show cabinet balaustrad/IMG_1896.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/5-Show cabinet balaustrad/IMG_1898.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/5-Show cabinet balaustrad/IMG_1899.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/5-Show cabinet balaustrad/IMG_1903.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/6-cladding/IMG_1881.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/6-cladding/IMG_1882.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/6-cladding/IMG_1883.JPG', caption: 'Battery Point' },
+            { src: 'Assets/Battery Point/6-cladding/IMG_1884.JPG', caption: 'Battery Point' },
+
             // Auguster Rd. Extension & Reno
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-1.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-2.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-3.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-4.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-5.JPG', caption: 'Auguster Rd Extension' },
-             { src: 'Assets/Auguster rd. Extension & Reno/Aug-6.JPG', caption: 'Auguster Rd Extension' },
+            { src: 'Assets/Auguster rd. Extension & Reno/Aug-6.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-7.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-8.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/Aug-9.JPG', caption: 'Auguster Rd Extension' },
@@ -690,29 +755,21 @@
             { src: 'Assets/Auguster rd. Extension & Reno/IMG_1333.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/IMG_1380.JPG', caption: 'Auguster Rd Extension' },
             { src: 'Assets/Auguster rd. Extension & Reno/IMG_1381.JPG', caption: 'Auguster Rd Extension' },
-            
-            // Door Install
-            { src: 'Assets/Door install/Door_1.JPG', caption: 'Door Installation' },
-            { src: 'Assets/Door install/Door_2.JPG', caption: 'Door Installation' },
-            { src: 'Assets/Door install/Door_3.JPG', caption: 'Door Installation' },
-            { src: 'Assets/Door install/Door_4.JPG', caption: 'Door Installation' },
-            { src: 'Assets/Door install/Door_5.JPG', caption: 'Door Installation' },
-            
-            // Front Deck
-            { src: 'Assets/Front Deck/Front-D_1.JPEG', caption: 'Front Deck' },
-            { src: 'Assets/Front Deck/Front-D_2.JPEG', caption: 'Front Deck' },
-            { src: 'Assets/Front Deck/Front-D_3.JPEG', caption: 'Front Deck' },
-            { src: 'Assets/Front Deck/Front-D_4.JPEG', caption: 'Front Deck' },
-            { src: 'Assets/Front Deck/Front-D_5.JPEG', caption: 'Front Deck' },
-            { src: 'Assets/Front Deck/Front-D_6.JPEG', caption: 'Front Deck' },
-            
+
+            // Eltham Pergola
+            { src: 'Assets/elth pergola/pergola-1.JPEG', caption: 'Eltham Pergola' },
+            { src: 'Assets/elth pergola/pergola-2.JPEG', caption: 'Eltham Pergola' },
+
+            // Internal Barn Doors
+            { src: 'Assets/Internal Barn Doors/1.JPEG', caption: 'Internal Barn Doors' },
+            { src: 'Assets/Internal Barn Doors/2.JPEG', caption: 'Internal Barn Doors' },
+
             // Kitchen Reno
             { src: 'Assets/Kitchen Reno/A.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1181.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1182.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1183.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1184.JPG', caption: 'Kitchen Renovation' },
-            { src: 'Assets/Kitchen Reno/IMG_1220.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1221.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1302.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/IMG_1303.JPG', caption: 'Kitchen Renovation' },
@@ -780,7 +837,46 @@
             { src: 'Assets/Kitchen Reno/z-1.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/z-2.JPG', caption: 'Kitchen Renovation' },
             { src: 'Assets/Kitchen Reno/z-3.JPEG', caption: 'Kitchen Renovation' },
-            
+
+            // Outdoor Living
+            { src: 'Assets/Outdoor Living/Out-1.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-2.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-3.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-4.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-5.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-6.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-7.JPG', caption: 'Outdoor Living' },
+            { src: 'Assets/Outdoor Living/Out-8.JPG', caption: 'Outdoor Living' },
+
+            // Door Install
+            { src: 'Assets/Door install/Door_1.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_2.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_3.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_4.JPG', caption: 'Door Installation' },
+            { src: 'Assets/Door install/Door_5.JPG', caption: 'Door Installation' },
+
+            // 2nd Story Extension
+            { src: 'Assets/2nd story ext/South-arm-1.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-2.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-3.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-4.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-5.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-6.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-7.JPG', caption: '2nd Story Extension' },
+            { src: 'Assets/2nd story ext/South-arm-8.JPG', caption: '2nd Story Extension' },
+
+            // Atrium
+            { src: 'Assets/Atrium/Atrium-1.JPEG', caption: 'Atrium Project' },
+            { src: 'Assets/Atrium/Atrium-2.JPEG', caption: 'Atrium Project' },
+
+            // Front Deck
+            { src: 'Assets/Front Deck/Front-D_1.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_2.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_3.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_4.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_5.JPEG', caption: 'Front Deck' },
+            { src: 'Assets/Front Deck/Front-D_6.JPEG', caption: 'Front Deck' },
+
             // Kitchens
             { src: 'Assets/Kitchens/1.PNG', caption: 'Kitchen Projects' },
             { src: 'Assets/Kitchens/2.PNG', caption: 'Kitchen Projects' },
@@ -790,11 +886,7 @@
             { src: 'Assets/Kitchens/6.JPG', caption: 'Kitchen Projects' },
             { src: 'Assets/Kitchens/7.JPG', caption: 'Kitchen Projects' },
             { src: 'Assets/Kitchens/8.JPG', caption: 'Kitchen Projects' },
-            
-            // Eltham Pergola
-            { src: 'Assets/elth pergola/pergola-1.JPEG', caption: 'Eltham Pergola' },
-            { src: 'Assets/elth pergola/pergola-2.JPEG', caption: 'Eltham Pergola' },
-            
+
             // Mancave Shed
             { src: 'Assets/mancave-shed/Mancave-1.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-2.JPEG', caption: 'Mancave Shed' },
@@ -807,58 +899,20 @@
             { src: 'Assets/mancave-shed/Mancave-9.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-10.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-11.JPEG', caption: 'Mancave Shed' },
-             { src: 'Assets/mancave-shed/Mancave-12-B.JPEG', caption: 'Mancave Shed' },
+            { src: 'Assets/mancave-shed/Mancave-12-B.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-12.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-13.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-14.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-15.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-16.JPEG', caption: 'Mancave Shed' },
             { src: 'Assets/mancave-shed/Mancave-17.JPEG', caption: 'Mancave Shed' },
-            
-            // Ruben's Deck
-            { src: "Assets/Ruben's deck/Deck-1.JPEG", caption: "Ruben's Deck" },
-            { src: "Assets/Ruben's deck/Deck-2.JPEG", caption: "Ruben's Deck" },
-            { src: "Assets/Ruben's deck/Deck-3.JPEG", caption: "Ruben's Deck" },
-            { src: "Assets/Ruben's deck/Deck-4.JPEG", caption: "Ruben's Deck" },
-            { src: "Assets/Ruben's deck/IMG_2419.JPEG", caption: "Ruben's Deck" },
-            
-            // Weerona
-            { src: 'Assets/weerona/Wee-1.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-2.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-3.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-4.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-5.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-6.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-7.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-8.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-9.JPEG', caption: 'Weerona Project' },
-             { src: 'Assets/weerona/Wee-9-B.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-10.JPEG', caption: 'Weerona Project' },
-            { src: 'Assets/weerona/Wee-11.JPEG', caption: 'Weerona Project' },
-            
-            // Outdoor Living
-            { src: 'Assets/Outdoor Living/Out-1.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-2.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-3.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-4.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-5.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-6.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-7.JPG', caption: 'Outdoor Living' },
-            { src: 'Assets/Outdoor Living/Out-8.JPG', caption: 'Outdoor Living' },
-            
+
             // Subfloor
             { src: 'Assets/Subfloor/Sub-Floor-1.JPG', caption: 'Subfloor Work' },
             { src: 'Assets/Subfloor/Sub-Floor-2.JPG', caption: 'Subfloor Work' },
             { src: 'Assets/Subfloor/Sub-Floor-3.JPG', caption: 'Subfloor Work' },
             { src: 'Assets/Subfloor/Sub-Floor-4.JPG', caption: 'Subfloor Work' },
-            { src: 'Assets/Subfloor/Sub-Floor-5.JPG', caption: 'Subfloor Work' },
-            
-            // Veranda Repairs
-            { src: 'Assets/Veranda repairs/IMG_2267.JPG', caption: 'Veranda Repairs' },
-            { src: 'Assets/Veranda repairs/IMG_2268.JPG', caption: 'Veranda Repairs' },
-            { src: 'Assets/Veranda repairs/IMG_2298.JPG', caption: 'Veranda Repairs' },
-            { src: 'Assets/Veranda repairs/IMG_2299.JPG', caption: 'Veranda Repairs' },
-            { src: 'Assets/Veranda repairs/IMG_2300.JPG', caption: 'Veranda Repairs' }
+            { src: 'Assets/Subfloor/Sub-Floor-5.JPG', caption: 'Subfloor Work' }
         ];
         
         let currentSlideIndex = 0;
