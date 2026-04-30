@@ -460,25 +460,109 @@
             .main-title {
                 font-size: 2rem;
             }
-            
+
             .flyer {
                 margin: 10px;
                 border-width: 2px;
             }
-            
+
             .services, .features, .cta {
                 padding: 1rem;
             }
-            
+
             .slide-btn {
                 font-size: 0.9rem;
                 padding: 0.4rem 0.6rem;
             }
-            
+
             .slide-caption {
                 font-size: 0.5rem;
                 padding: 0.3rem 0.6rem;
             }
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: #1a2634;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .reviews-title {
+            font-size: 1.8rem;
+            color: #FFD700;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .review-carousel-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            display: none;
+            background: rgba(255,255,255,0.07);
+            border-radius: 12px;
+            border-left: 5px solid #FF6B35;
+            padding: 1.5rem 2rem;
+            text-align: left;
+        }
+
+        .review-card.active {
+            display: block;
+        }
+
+        .review-stars {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: #FF6B35;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .review-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .review-nav-btn {
+            background: rgba(255,107,53,0.7);
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .review-nav-btn:hover {
+            background: #FF6B35;
+        }
+
+        .review-counter {
+            color: #aaa;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -544,6 +628,19 @@
                     <span class="feature-icon">🏆</span>
                     <div class="feature-title">35+ Years Experience</div>
                     <div class="feature-text">Quality workmanship guaranteed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews">
+            <h2 class="reviews-title">What Clients Say</h2>
+            <div class="review-carousel-wrapper">
+                <div id="reviewCards"></div>
+                <div class="review-nav" id="reviewNav" style="display:none;">
+                    <button class="review-nav-btn" onclick="changeReview(-1)">‹</button>
+                    <span class="review-counter" id="reviewCounter"></span>
+                    <button class="review-nav-btn" onclick="changeReview(1)">›</button>
                 </div>
             </div>
         </section>
@@ -650,6 +747,15 @@
             { src: 'Assets/weerona/Wee-9-B.JPEG', caption: 'Weerona Project' },
             { src: 'Assets/weerona/Wee-10.JPEG', caption: 'Weerona Project' },
             { src: 'Assets/weerona/Wee-11.JPEG', caption: 'Weerona Project' },
+
+            // Ringwood Butler's Pantry
+            { src: "Assets/Ringwood butler's pantry/1.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/2.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/3.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/4.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/5.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/6.JPEG", caption: "Butler's Pantry" },
+            { src: "Assets/Ringwood butler's pantry/7.JPEG", caption: "Butler's Pantry" },
 
             // Ruben's Deck
             { src: "Assets/Ruben's deck/Deck-1.JPEG", caption: "Ruben's Deck" },
@@ -981,8 +1087,49 @@
             }
         });
         
+        // Reviews data — add new ones here
+        const reviews = [
+            {
+                stars: 5,
+                text: "Really enjoying the pantry, you did such a good job with the shelves.",
+                author: "K. Blake, Ringwood"
+            }
+        ];
+
+        let currentReviewIndex = 0;
+
+        function initReviews() {
+            const container = document.getElementById('reviewCards');
+            reviews.forEach((r, i) => {
+                const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
+                const card = document.createElement('div');
+                card.className = 'review-card' + (i === 0 ? ' active' : '');
+                card.innerHTML = `
+                    <div class="review-stars">${stars}</div>
+                    <p class="review-text">"${r.text}"</p>
+                    <div class="review-author">— ${r.author}</div>
+                `;
+                container.appendChild(card);
+            });
+            if (reviews.length > 1) {
+                document.getElementById('reviewNav').style.display = 'flex';
+                document.getElementById('reviewCounter').textContent = `1 / ${reviews.length}`;
+            }
+        }
+
+        function changeReview(dir) {
+            const cards = document.querySelectorAll('.review-card');
+            cards[currentReviewIndex].classList.remove('active');
+            currentReviewIndex = (currentReviewIndex + dir + reviews.length) % reviews.length;
+            cards[currentReviewIndex].classList.add('active');
+            document.getElementById('reviewCounter').textContent = `${currentReviewIndex + 1} / ${reviews.length}`;
+        }
+
         // Start when page loads
-        document.addEventListener('DOMContentLoaded', initSlideshow);
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlideshow();
+            initReviews();
+        });
     </script>
 </body>
 </html>
