@@ -145,6 +145,29 @@
         .thankyou p {
             color: #666;
         }
+
+        .field-note {
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: -1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 0.5rem 0;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .file-error {
+            display: none;
+            color: #cc0000;
+            font-size: 0.85rem;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -159,6 +182,7 @@
 
             <label for="name">Your name</label>
             <input type="text" id="name" name="name" placeholder="e.g. J. Smith, Warrandyte" required>
+            <p class="field-note">First name or initials are fine if you'd prefer privacy</p>
 
             <label>Star rating</label>
             <div class="star-row" id="starRow">
@@ -172,6 +196,11 @@
 
             <label for="review">Your review</label>
             <textarea id="review" name="review" placeholder="Tell us about the work done..." required></textarea>
+
+            <label for="photo">Photo of the job <span style="font-weight:normal; color:#888;">(optional)</span></label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <p class="field-note">Max 5MB — no photo needed, just a bonus if you have one</p>
+            <p class="file-error" id="fileError">Photo is too large — please choose one under 5MB</p>
 
             <button type="submit" class="submit-btn">Submit Review</button>
         </form>
@@ -202,6 +231,17 @@
                 starsInput.value = selectedVal;
                 stars.forEach(s => s.classList.toggle('selected', +s.dataset.val <= selectedVal));
             });
+        });
+
+        // File size check
+        document.getElementById('photo').addEventListener('change', function() {
+            const fileError = document.getElementById('fileError');
+            if (this.files[0] && this.files[0].size > 5 * 1024 * 1024) {
+                fileError.style.display = 'block';
+                this.value = '';
+            } else {
+                fileError.style.display = 'none';
+            }
         });
 
         // Handle submit via fetch so we can show thank you on same page
