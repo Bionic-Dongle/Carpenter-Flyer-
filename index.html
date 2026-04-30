@@ -538,6 +538,36 @@
             letter-spacing: 1px;
         }
 
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .review-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid #FF6B35;
+        }
+
+        .review-avatar-placeholder {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #FF6B35;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
         .review-nav {
             display: flex;
             justify-content: center;
@@ -1092,7 +1122,8 @@
             {
                 stars: 5,
                 text: "Really enjoying the pantry, you did such a good job with the shelves.",
-                author: "K. Blake, Ringwood"
+                author: "K. Blake, Ringwood",
+                avatar: "Assets/Reviews/k-blake.png"
             }
         ];
 
@@ -1102,12 +1133,20 @@
             const container = document.getElementById('reviewCards');
             reviews.forEach((r, i) => {
                 const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
+                const avatarHtml = r.avatar
+                    ? `<img class="review-avatar" src="${r.avatar}" alt="${r.author}">`
+                    : `<div class="review-avatar-placeholder">${r.author.charAt(0)}</div>`;
                 const card = document.createElement('div');
                 card.className = 'review-card' + (i === 0 ? ' active' : '');
                 card.innerHTML = `
-                    <div class="review-stars">${stars}</div>
+                    <div class="review-header">
+                        ${avatarHtml}
+                        <div>
+                            <div class="review-stars">${stars}</div>
+                            <div class="review-author">— ${r.author}</div>
+                        </div>
+                    </div>
                     <p class="review-text">"${r.text}"</p>
-                    <div class="review-author">— ${r.author}</div>
                 `;
                 container.appendChild(card);
             });
