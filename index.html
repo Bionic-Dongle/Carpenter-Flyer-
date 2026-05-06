@@ -1190,7 +1190,7 @@
             {
                 stars: 5,
                 text: "Lynton has just completed numerous jobs at our home. He is now my go-to person to call for any jobs, big or small. Lynton is very skilled, pays attention to detail, very polite and trustworthy. I would totally recommend Lynton for minor to major work , including renovations.",
-                author: "P. Trentos"
+                author: "P. Trento"
             }
         ];
 
@@ -1220,6 +1220,9 @@
             if (reviews.length > 1) {
                 document.getElementById('reviewNav').style.display = 'flex';
                 document.getElementById('reviewCounter').textContent = `1 / ${reviews.length}`;
+            }
+            if (reviews.length > 2) {
+                setInterval(() => changeReview(1), 5000);
             }
         }
 
